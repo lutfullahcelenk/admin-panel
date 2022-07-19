@@ -1,5 +1,6 @@
+import Image from "next/image";
 import React from "react";
-import Image from "next-image"
+import { navbarItems } from "../../constants/navbarItems";
 
 const Navbar = () => {
   return (
@@ -14,10 +15,15 @@ const Navbar = () => {
         Pages
       </div>
 
-      <div className="flex">
-          <div>image</div>
-          <div>dashboard</div>
-      </div>
+      {navbarItems.map((item) => (
+        <div key={item.id} className="flex m-5 mt-2 cursor-pointer">
+          <div className="">
+            <Image src={item.image} alt="image" width="30" height="30" />
+          </div>
+
+          <div className="mx-3 text-white">{item.title}</div>
+        </div>
+      ))}
     </div>
   );
 };
