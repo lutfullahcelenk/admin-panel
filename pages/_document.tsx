@@ -12,7 +12,7 @@ export default function Document() {
           rel="stylesheet"
         />
       </Head>
-      <body className="bg-gradient-to-r from-yellow-500 to-green-500">
+      <body className="bg-gradient-to-r from-gray-300 to-white">
         <Main />
         <NextScript />
       </body>
