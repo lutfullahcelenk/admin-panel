@@ -1,13 +1,18 @@
 import type { NextPage } from "next";
 //components
-import Navbar from "../components/Navbar";
+import Sidebar from "../components/Sidebar";
+import TopBar from "../components/TopBar";
 
 const Home: NextPage = () => {
   return (
     <div className="flex">
-      <Navbar />
+      <Sidebar />
 
-      <div>Main Content area</div>
+      <div className="flex-1">
+        <div>
+          <TopBar />
+        </div>
+      </div>
     </div>
   );
 };
