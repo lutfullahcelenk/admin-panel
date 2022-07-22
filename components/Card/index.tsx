@@ -11,9 +11,11 @@ const Card = ({ data }: ICard) => {
       <div>
         <Image src="/assets/wallet.png" alt="wallet" width="40" height="40" />
         <div className="text-xl font-bold text-gray-700">{data.title}</div>
+
         <div className="my-3 text-sm font-bold text-gray-400 uppercase">
           {data.tag}
         </div>
+
         <div className="flex items-end mb-3">
           <span className="mr-2 text-3xl font-bold">$ {data.price}</span>
           <span
@@ -23,6 +25,10 @@ const Card = ({ data }: ICard) => {
           >
             {data.percentage}%
           </span>
+        </div>
+        
+        <div>
+            {data.chart}
         </div>
       </div>
     </div>
