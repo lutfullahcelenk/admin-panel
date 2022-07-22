@@ -4,6 +4,7 @@ import type { NextPage } from "next";
 import Sidebar from "../components/Sidebar";
 import SiteBanner from "../components/SiteBanner";
 import TopBar from "../components/TopBar";
+import Cards from "../components/Cards";
 
 const Home: NextPage = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,6 +16,7 @@ const Home: NextPage = () => {
       <div className="flex-1">
         <TopBar setIsOpen={setIsOpen} isOpen={isOpen} />
         <SiteBanner />
+        <Cards />
       </div>
     </div>
   );
