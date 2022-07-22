@@ -13,13 +13,13 @@ const Home: NextPage = () => {
   const [search, setSearch] = useState("");
   const [filteredCards, setFilteredCards] = useState([]);
 
-  useEffect(() => {
-    const filtered: any = cards.filter((card) =>
-      card.title.toLocaleLowerCase().includes(search.toLocaleLowerCase())||
-      card.tag.toLocaleLowerCase().includes(search.toLocaleLowerCase())
-    );
-    setFilteredCards(filtered);
-  }, [search]);
+  useEffect(() => setFilteredCards(
+    //@ts-ignore
+    [...cards]?.filter(
+      (card) => card.title.toLocaleLowerCase().includes(search.toLocaleLowerCase()) ||
+        card.tag.toLocaleLowerCase().includes(search.toLocaleLowerCase())
+    )
+  ), [search]);
 
   return (
     <div className="flex">
