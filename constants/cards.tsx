@@ -24,7 +24,7 @@ export const cards = [
   },
   {
     id: 2,
-    title: "Lutfullah Plus",
+    title: "Lutfullah Currency",
     tag: "Cripto Currency",
     price: "24,780",
     percentage: "+13",
@@ -32,7 +32,7 @@ export const cards = [
   },
   {
     id: 3,
-    title: "Lutfullah Pro",
+    title: "Lutfullah Depth",
     tag: "Inflation",
     price: "24,780",
     percentage: "-57",
